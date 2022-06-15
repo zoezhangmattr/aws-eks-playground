@@ -1,0 +1,7 @@
+.terraform
+infra/terraform.tfstate*
+infra/.terraform.lock.hcl
+*test*.sh
+test.tfvars
+kubeconfig*
+scripts
