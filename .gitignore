@@ -1,6 +1,7 @@
 .terraform
 infra/terraform.tfstate*
 infra/.terraform.lock.hcl
+infra/.terraform.tfstate.lock.info
 *test*.sh
 test.tfvars
 kubeconfig*

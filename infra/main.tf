@@ -65,9 +65,12 @@ module "eks-test" {
 
 module "role" {
   source               = "git@github.com:zoezhangmattr/terraform-aws-eks.git//modules/oidc-role"
-  cluster_name         = "test"
+  cluster_name         = module.eks-test.cluster_name
   role_name            = "safe"
   service_account_name = "safe-sa"
   namespace            = "sandbox"
   policy               = file("policy/safe.json")
+  depends_on = [
+    module.eks-test
+  ]
 }
